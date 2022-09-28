@@ -1,0 +1,23 @@
+kristina@UNIT-2375:~/Desktop/LEARNING/Docker/npm-app$ 'sudo docker build . -t learning-docker/node-web-app'
+#Build of docker image with learning-docker/node-web-app name, -t (tag)
+ 
+Successfully built 5dccc6b63c77
+Successfully tagged learning-docker/node-web-app:latest
+
+
+kristina@UNIT-2375:~/Desktop/LEARNING/Docker/npm-app$ sudo docker images
+#Show all images
+REPOSITORY                     TAG       IMAGE ID       CREATED              SIZE
+learning-docker/node-web-app   latest    5dccc6b63c77   About a minute ago   913MB
+node                           16        c8af85aa3027   2 weeks ago          910MB
+hello-world                    latest    feb5d9fea6a5   11 months ago        13.3kB
+
+
+kristina@UNIT-2375:~/Desktop/LEARNING/Docker/npm-app$ sudo docker run -d -p 8080:8080 5dccc6b63c77
+runs a new container from the image with id <5dccc6b63c77> and maps it\'s port 8080 to the port 8080 of the host machine (localhost)
+
+kristina@UNIT-2375:~/Desktop/LEARNING/Docker/npm-app$ sudo docker ps -a
+shows all running containers
+
+kristina@UNIT-2375:~/Desktop/LEARNING/Docker/npm-app$ sudo docker stop 834
+stops the container with id which starts with 834
