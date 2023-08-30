@@ -1,0 +1,10 @@
+{
+  "name": "Node.js",
+  "image": "node:14",
+
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+
+  "forwardPorts": [3000]
+}
